@@ -24,7 +24,24 @@ addons:
 cache: yarn
 install:
   - yarn install --network-timeout 1000000
+  - git clone git@github.com:dygmalab/chrysalis-api
+  - cd chrysalis-api
+  - yarn 
+  - ./node_modules/.bin/lerna run build
+  - cd packages/chrysalis-hardware-dygma-raise-ansi/
+  - yarn link
+  - cd -
+  - cd packages/chrysalis-hardware-dygma-raise-iso/
+  - yarn link
+  - cd -
+  - cd packages/chrysalis-flash/
+  - yarn link
+  - cd -
 script:
+  - yarn
+  - yarn link '@chrysalis-api/hardware-dygma-raise-ansi'
+  - yarn link '@chrysalis-api/hardware-dygma-raise-iso'
+  - yarn link '@chrysalis-api/chrysalis-flash'
   - yarn run build:$TRAVIS_OS_NAME
 after_script:
   - yarn add --dev aws-sdk
