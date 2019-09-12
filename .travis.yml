@@ -23,7 +23,8 @@ addons:
       - libudev-dev
 cache: yarn
 install:
-  - yarn install --network-timeout 1000000
+  - cd $HOME
+  - pwd
 #  - git clone git@github.com:dygmalab/chrysalis-api
   - git clone https://github.com/0957758592/chrysalis-api.git
   - cd chrysalis-api
@@ -39,8 +40,9 @@ install:
   - cd packages/chrysalis-flash/
   - yarn link
   - cd -
+  - cd $TRAVIS_BUILD_DIR
+  - yarn install --network-timeout 1000000
 script:
-  - yarn
   - yarn link '@chrysalis-api/hardware-dygma-raise-ansi'
   - yarn link '@chrysalis-api/hardware-dygma-raise-iso'
   - yarn link '@chrysalis-api/chrysalis-flash'
