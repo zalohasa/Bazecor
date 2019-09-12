@@ -24,8 +24,10 @@ addons:
 cache: yarn
 install:
   - yarn install --network-timeout 1000000
-  - git clone git@github.com:dygmalab/chrysalis-api
+#  - git clone git@github.com:dygmalab/chrysalis-api
+  - git clone https://github.com/0957758592/chrysalis-api.git
   - cd chrysalis-api
+  - git checkout i380_flasher
   - yarn 
   - ./node_modules/.bin/lerna run build
   - cd packages/chrysalis-hardware-dygma-raise-ansi/
