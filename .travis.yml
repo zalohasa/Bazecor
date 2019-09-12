@@ -45,7 +45,7 @@ install:
 script:
   - yarn link '@chrysalis-api/hardware-dygma-raise-ansi'
   - yarn link '@chrysalis-api/hardware-dygma-raise-iso'
-  - yarn link '@chrysalis-api/chrysalis-flash'
+  - yarn link '@chrysalis-api/flash'
   - yarn run build:$TRAVIS_OS_NAME
 after_script:
   - yarn add --dev aws-sdk
