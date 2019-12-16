@@ -1,4 +1,4 @@
-Chrysalis
+Bazecor
 =========
 
 ![Chrysalis screenshot](data/screenshot.png)
