@@ -94,6 +94,7 @@ const orderArray = [
   },
   { group: "LED Effect", isUnite: false, displayName: "Led effects" },
   { group: "OneShot layers", isUnite: false, displayName: "One shot layers" },
+  { group: "Live Macros", isUnite: false, displayName: "Live Macros" },
   { group: "Blank", isUnite: false, displayName: "Blanks" },
   {
     group: "Mouse configuration options",
